@@ -1,69 +1,131 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f8f8f8;
-    color: #333;
-    line-height: 1.6;
+html{
+    scroll-behavior:smooth;
 }
 
-header {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#fafafa;
+    color:#333;
+    line-height:1.7;
 }
 
-header h1 {
-    font-size: 2.5rem;
+/* ===========================
+   HEADER
+=========================== */
+
+header{
+    background:#1f1f1f;
+    text-align:center;
+    padding:35px 20px 25px;
 }
 
-header p {
-    margin-top: 10px;
-    color: #ddd;
+.logo{
+    width:500px;
+    max-width:90%;
+    display:block;
+    margin:auto;
 }
 
-.hero img {
-    width: 100%;
-    display: block;
+.subtitle{
+    color:#d8d8d8;
+    font-size:14px;
+    letter-spacing:5px;
+    margin-top:12px;
 }
 
-.content {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+    width:100%;
+    overflow:hidden;
 }
 
-.content h2 {
-    margin: 30px 0 15px;
+.hero img{
+    width:100%;
+    display:block;
 }
 
-.content ul {
-    margin-left: 20px;
+/* ===========================
+   SEZIONI
+=========================== */
+
+.content{
+    max-width:900px;
+    margin:70px auto;
+    padding:0 25px;
 }
 
-.button {
-    display: inline-block;
-    margin-top: 25px;
-    background: #1e88e5;
-    color: white;
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 6px;
+.content h2{
+    text-align:center;
+    font-size:34px;
+    font-weight:300;
+    margin-bottom:30px;
+    color:#222;
 }
 
-.button:hover {
-    background: #1565c0;
+.content p{
+    text-align:center;
+    font-size:18px;
 }
 
-footer {
-    margin-top: 60px;
-    padding: 30px;
-    text-align: center;
-    background: #222;
-    color: white;
+.content ul{
+    list-style:none;
+    margin-top:20px;
+}
+
+.content li{
+    padding:10px 0;
+    border-bottom:1px solid #ececec;
+    font-size:18px;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+    background:#1f1f1f;
+    color:white;
+    text-align:center;
+    padding:35px;
+    margin-top:80px;
+    font-size:14px;
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+.logo{
+    width:300px;
+}
+
+.subtitle{
+    font-size:12px;
+    letter-spacing:3px;
+}
+
+.content{
+    margin:50px auto;
+}
+
+.content h2{
+    font-size:28px;
+}
+
+.content p,
+.content li{
+    font-size:16px;
+}
+
 }

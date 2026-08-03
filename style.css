@@ -205,7 +205,7 @@ h2{
 
     background:#faf8f5;
 
-    padding:110px 0;
+    padding:60px 0;
 
 }
 
@@ -233,12 +233,12 @@ h2{
 
 }
 .contact-box{
- max-width:700px;
+ max-width:550px;
  margin:auto;
  background:#fff;
- padding:40px;
- border-radius:16px;
- box-shadow:0 15px 35px rgba(0,0,0,.08);
+ padding:25px 30px;
+ border-radius:14px;
+ box-shadow:0 10px 25px rgba(0,0,0,.08);
  text-align:center;
 }
 
@@ -246,7 +246,7 @@ footer{
  background:var(--dark);
  color:#fff;
  text-align:center;
- padding:40px 20px;
+ padding:22px 20px;
 }
 
 footer p{color:#ddd}

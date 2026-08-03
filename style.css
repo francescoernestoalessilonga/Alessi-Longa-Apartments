@@ -1,3 +1,13 @@
+/* ===========================
+   GOOGLE FONTS
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;500;600&display=swap');
+
+/* ===========================
+   RESET
+=========================== */
+
 *{
     margin:0;
     padding:0;
@@ -9,34 +19,15 @@ html{
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#fafafa;
-    color:#333;
+
+    font-family:'Montserrat',sans-serif;
+
+    background:#faf8f4;
+
+    color:#2f2f2f;
+
     line-height:1.7;
-}
 
-/* ===========================
-   HEADER
-=========================== */
-
-header{
-    background:#1f1f1f;
-    text-align:center;
-    padding:35px 20px 25px;
-}
-
-.logo{
-    width:500px;
-    max-width:90%;
-    display:block;
-    margin:auto;
-}
-
-.subtitle{
-    color:#d8d8d8;
-    font-size:14px;
-    letter-spacing:5px;
-    margin-top:12px;
 }
 
 /* ===========================
@@ -44,47 +35,253 @@ header{
 =========================== */
 
 .hero{
+
+    position:relative;
+
     width:100%;
+
+    height:100vh;
+
     overflow:hidden;
+
 }
 
 .hero img{
+
     width:100%;
-    display:block;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.30);
+
+}
+
+.hero-content{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
+    padding:20px;
+
+}
+
+.logo{
+
+    width:420px;
+
+    max-width:85%;
+
+    margin-bottom:25px;
+
+    filter:drop-shadow(0 3px 10px rgba(0,0,0,.45));
+
+}
+
+.location{
+
+    letter-spacing:5px;
+
+    font-size:14px;
+
+    text-transform:uppercase;
+
 }
 
 /* ===========================
-   SEZIONI
+   SECTIONS
 =========================== */
 
-.content{
-    max-width:900px;
-    margin:70px auto;
-    padding:0 25px;
+.container{
+
+    width:90%;
+
+    max-width:1150px;
+
+    margin:auto;
+
 }
 
-.content h2{
-    text-align:center;
-    font-size:34px;
-    font-weight:300;
-    margin-bottom:30px;
-    color:#222;
+section{
+
+    padding:90px 0;
+
 }
 
-.content p{
+h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:52px;
+
+    font-weight:600;
+
     text-align:center;
+
+    margin-bottom:35px;
+
+    color:#2c2c2c;
+
+}
+
+p{
+
     font-size:18px;
+
+    max-width:850px;
+
+    margin:auto;
+
+    text-align:center;
+
 }
 
-.content ul{
+/* ===========================
+   FEATURES
+=========================== */
+
+.features{
+
+    background:white;
+
+}
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    margin-top:45px;
+
+}
+
+.card{
+
+    background:#f4f1eb;
+
+    border-radius:14px;
+
+    padding:40px 20px;
+
+    text-align:center;
+
+}
+
+.card h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:60px;
+
+    color:#8c6544;
+
+}
+
+.card p{
+
+    margin-top:10px;
+
+    font-size:16px;
+
+}
+
+/* ===========================
+   DETAILS
+=========================== */
+
+.details{
+
+    background:#faf8f4;
+
+}
+
+.details ul{
+
     list-style:none;
-    margin-top:20px;
+
+    max-width:700px;
+
+    margin:45px auto 0;
+
 }
 
-.content li{
-    padding:10px 0;
-    border-bottom:1px solid #ececec;
-    font-size:18px;
+.details li{
+
+    padding:16px 0;
+
+    border-bottom:1px solid #ddd;
+
+    text-align:center;
+
+}
+
+/* ===========================
+   CONTACT
+=========================== */
+
+.contact{
+
+    background:white;
+
+}
+
+.contact a{
+
+    display:inline-block;
+
+    margin-top:35px;
+
+    padding:16px 38px;
+
+    border:2px solid #8c6544;
+
+    color:#8c6544;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    transition:.3s;
+
+}
+
+.contact a:hover{
+
+    background:#8c6544;
+
+    color:white;
+
+}
+
+.contact{
+
+    text-align:center;
+
 }
 
 /* ===========================
@@ -92,40 +289,83 @@ header{
 =========================== */
 
 footer{
+
     background:#1f1f1f;
+
     color:white;
+
     text-align:center;
-    padding:35px;
-    margin-top:80px;
+
+    padding:40px;
+
     font-size:14px;
+
 }
 
 /* ===========================
    MOBILE
 =========================== */
 
-@media(max-width:768px){
+@media(max-width:900px){
+
+.grid{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+h2{
+
+font-size:40px;
+
+}
 
 .logo{
-    width:300px;
+
+width:300px;
+
 }
 
-.subtitle{
-    font-size:12px;
-    letter-spacing:3px;
 }
 
-.content{
-    margin:50px auto;
+@media(max-width:600px){
+
+.hero{
+
+height:75vh;
+
 }
 
-.content h2{
-    font-size:28px;
+.grid{
+
+grid-template-columns:1fr;
+
 }
 
-.content p,
-.content li{
-    font-size:16px;
+section{
+
+padding:70px 0;
+
+}
+
+h2{
+
+font-size:34px;
+
+}
+
+p{
+
+font-size:16px;
+
+}
+
+.location{
+
+font-size:12px;
+
+letter-spacing:3px;
+
 }
 
 }

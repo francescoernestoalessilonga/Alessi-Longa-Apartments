@@ -1,10 +1,4 @@
 /* ===========================
-   GOOGLE FONTS
-=========================== */
-
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;500;600&display=swap');
-
-/* ===========================
    RESET
 =========================== */
 
@@ -19,15 +13,9 @@ html{
 }
 
 body{
-
-    font-family:'Montserrat',sans-serif;
-
-    background:#faf8f4;
-
-    color:#2f2f2f;
-
-    line-height:1.7;
-
+    font-family:'Inter',sans-serif;
+    color:#fff;
+    background:#fff;
 }
 
 /* ===========================
@@ -42,17 +30,13 @@ body{
 
     height:100vh;
 
-    overflow:hidden;
+    background-image:url("hero.jpg");
 
-}
+    background-size:cover;
 
-.hero img{
+    background-position:center;
 
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
+    background-repeat:no-repeat;
 
 }
 
@@ -62,243 +46,115 @@ body{
 
     inset:0;
 
-    background:rgba(0,0,0,.30);
+    background:rgba(0,0,0,.35);
 
 }
 
-.hero-content{
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
 
     position:absolute;
 
-    inset:0;
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    padding:35px 70px;
 
     display:flex;
 
-    flex-direction:column;
-
-    justify-content:center;
+    justify-content:space-between;
 
     align-items:center;
 
-    text-align:center;
-
-    color:white;
-
-    padding:20px;
+    z-index:100;
 
 }
 
-.logo{
+.logo img{
 
-    width:420px;
+    width:250px;
 
-    max-width:85%;
-
-    margin-bottom:25px;
-
-    filter:drop-shadow(0 3px 10px rgba(0,0,0,.45));
+    display:block;
 
 }
 
-.location{
-
-    letter-spacing:5px;
-
-    font-size:14px;
-
-    text-transform:uppercase;
-
-}
-
-/* ===========================
-   SECTIONS
-=========================== */
-
-.container{
-
-    width:90%;
-
-    max-width:1150px;
-
-    margin:auto;
-
-}
-
-section{
-
-    padding:90px 0;
-
-}
-
-h2{
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:52px;
-
-    font-weight:600;
-
-    text-align:center;
-
-    margin-bottom:35px;
-
-    color:#2c2c2c;
-
-}
-
-p{
-
-    font-size:18px;
-
-    max-width:850px;
-
-    margin:auto;
-
-    text-align:center;
-
-}
-
-/* ===========================
-   FEATURES
-=========================== */
-
-.features{
-
-    background:white;
-
-}
-
-.grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:30px;
-
-    margin-top:45px;
-
-}
-
-.card{
-
-    background:#f4f1eb;
-
-    border-radius:14px;
-
-    padding:40px 20px;
-
-    text-align:center;
-
-}
-
-.card h3{
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:60px;
-
-    color:#8c6544;
-
-}
-
-.card p{
-
-    margin-top:10px;
-
-    font-size:16px;
-
-}
-
-/* ===========================
-   DETAILS
-=========================== */
-
-.details{
-
-    background:#faf8f4;
-
-}
-
-.details ul{
+.menu{
 
     list-style:none;
 
-    max-width:700px;
+    display:flex;
 
-    margin:45px auto 0;
-
-}
-
-.details li{
-
-    padding:16px 0;
-
-    border-bottom:1px solid #ddd;
-
-    text-align:center;
+    gap:40px;
 
 }
 
-/* ===========================
-   CONTACT
-=========================== */
+.menu a{
 
-.contact{
-
-    background:white;
-
-}
-
-.contact a{
-
-    display:inline-block;
-
-    margin-top:35px;
-
-    padding:16px 38px;
-
-    border:2px solid #8c6544;
-
-    color:#8c6544;
+    color:white;
 
     text-decoration:none;
 
-    border-radius:50px;
+    font-size:15px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
 
     transition:.3s;
 
 }
 
-.contact a:hover{
+.menu a:hover{
 
-    background:#8c6544;
-
-    color:white;
-
-}
-
-.contact{
-
-    text-align:center;
+    opacity:.7;
 
 }
 
 /* ===========================
-   FOOTER
+   HERO TEXT
 =========================== */
 
-footer{
+.hero-content{
 
-    background:#1f1f1f;
+    position:absolute;
 
-    color:white;
+    z-index:10;
 
-    text-align:center;
+    left:80px;
 
-    padding:40px;
+    bottom:120px;
+
+    max-width:650px;
+
+}
+
+.small-title{
 
     font-size:14px;
+
+    letter-spacing:6px;
+
+    margin-bottom:18px;
+
+    text-transform:uppercase;
+
+}
+
+.hero h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:82px;
+
+    line-height:0.95;
+
+    font-weight:500;
 
 }
 
@@ -308,63 +164,53 @@ footer{
 
 @media(max-width:900px){
 
-.grid{
+.navbar{
 
-grid-template-columns:1fr 1fr;
+    padding:25px;
 
-}
+    flex-direction:column;
 
-h2{
-
-font-size:40px;
+    gap:25px;
 
 }
 
-.logo{
+.logo img{
 
-width:300px;
-
-}
+    width:180px;
 
 }
 
-@media(max-width:600px){
+.menu{
 
-.hero{
+    gap:18px;
 
-height:75vh;
+    flex-wrap:wrap;
 
-}
-
-.grid{
-
-grid-template-columns:1fr;
+    justify-content:center;
 
 }
 
-section{
+.hero-content{
 
-padding:70px 0;
+    left:35px;
 
-}
+    right:35px;
 
-h2{
-
-font-size:34px;
+    bottom:70px;
 
 }
 
-p{
+.hero h1{
 
-font-size:16px;
+    font-size:54px;
 
 }
 
-.location{
+.small-title{
 
-font-size:12px;
+    font-size:12px;
 
-letter-spacing:3px;
+    letter-spacing:4px;
 
 }
 

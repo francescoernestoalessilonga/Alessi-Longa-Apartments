@@ -1,9 +1,14 @@
 /* ==========================================================
    ALESSI LONGA APARTMENTS
    STYLE.CSS
+   PART 1
+   Reset • Variables • Base • Header • Hero
 ========================================================== */
 
-/* RESET */
+
+/* ==========================================================
+   RESET
+========================================================== */
 
 *{
     margin:0;
@@ -16,37 +21,208 @@ html{
 }
 
 body{
-    font-family:'Inter',sans-serif;
+
+    font-family:"Inter",sans-serif;
     background:#ffffff;
-    color:#333;
+    color:#444;
     overflow-x:hidden;
+    line-height:1.7;
+
 }
 
 img{
+
     display:block;
     max-width:100%;
+
 }
 
 a{
+
     text-decoration:none;
     color:inherit;
+
 }
 
 ul{
+
     list-style:none;
+
 }
 
-/* COLORS */
+button{
+
+    border:none;
+    background:none;
+    cursor:pointer;
+    font:inherit;
+
+}
+
+
+/* ==========================================================
+   VARIABLES
+========================================================== */
 
 :root{
 
     --white:#ffffff;
-    --black:#181818;
-    --text:#4f4f4f;
-    --gold:#a88455;
-    --background:#faf8f4;
+
+    --black:#1f1f1f;
+
+    --text:#505050;
+
+    --light:#faf8f5;
+
+    --gold:#af8c5a;
+
+    --shadow:0 25px 60px rgba(0,0,0,.12);
+
+    --container:1380px;
+
+    --transition:.35s ease;
 
 }
+
+
+/* ==========================================================
+   TYPOGRAPHY
+========================================================== */
+
+h1,
+h2,
+h3{
+
+    font-family:"Cormorant Garamond",serif;
+    font-weight:500;
+    color:var(--black);
+
+}
+
+p{
+
+    color:var(--text);
+
+}
+
+.container{
+
+    width:min(var(--container),92%);
+    margin:auto;
+
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+header{
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:999;
+
+}
+
+.navbar{
+
+    width:min(1450px,94%);
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    padding:42px 0;
+
+}
+
+
+/* ---------- LOGO ---------- */
+
+.logo{
+
+    display:flex;
+    align-items:center;
+
+}
+
+.logo img{
+
+    width:185px;
+    height:auto;
+
+}
+
+
+/* ---------- MENU ---------- */
+
+.menu{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:46px;
+
+    margin-top:12px;
+
+}
+
+.menu a{
+
+    color:white;
+
+    font-size:13px;
+
+    font-weight:500;
+
+    text-transform:uppercase;
+
+    letter-spacing:2.8px;
+
+    transition:var(--transition);
+
+    position:relative;
+
+}
+
+.menu a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:1px;
+
+    background:white;
+
+    transition:var(--transition);
+
+}
+
+.menu a:hover::after{
+
+    width:100%;
+
+}
+
 
 /* ==========================================================
    HERO
@@ -60,19 +236,26 @@ ul{
 
     height:100vh;
 
-    min-height:820px;
+    min-height:900px;
 
-    background-image:url(hero.jpg);
-
-    background-size:cover;
+    background-image:url("hero.jpg");
 
     background-position:center;
 
+    background-size:cover;
+
     background-repeat:no-repeat;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
 
 }
 
-/* overlay */
+
+/* ---------- OVERLAY ---------- */
 
 .overlay{
 
@@ -80,101 +263,24 @@ ul{
 
     inset:0;
 
-    background:rgba(0,0,0,.28);
+    background:rgba(0,0,0,.34);
 
 }
 
-/* ==========================================================
-   NAVBAR
-========================================================== */
 
-header{
-
-    position:absolute;
-
-    width:100%;
-
-    top:0;
-
-    left:0;
-
-    z-index:999;
-
-}
-
-.navbar{
-
-    max-width:1450px;
-
-    margin:auto;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:35px 60px;
-
-}
-
-.logo img{
-
-    width:230px;
-
-}
-
-.menu{
-
-    display:flex;
-
-    gap:42px;
-
-}
-
-.menu a{
-
-    color:white;
-
-    font-size:14px;
-
-    letter-spacing:2px;
-
-    text-transform:uppercase;
-
-    font-weight:500;
-
-    transition:.25s;
-
-}
-
-.menu a:hover{
-
-    color:#ececec;
-
-}
-
-/* ==========================================================
-   HERO TEXT
-========================================================== */
+/* ---------- HERO CONTENT ---------- */
 
 .hero-content{
 
-    position:absolute;
+    position:relative;
 
-    left:50%;
-
-    top:50%;
-
-    transform:translate(-50%,-50%);
+    z-index:10;
 
     text-align:center;
 
-    width:100%;
+    width:min(900px,92%);
 
-    padding:20px;
-
-    z-index:20;
+    margin-top:70px;
 
 }
 
@@ -182,13 +288,13 @@ header{
 
     color:white;
 
-    letter-spacing:6px;
+    font-size:15px;
 
     text-transform:uppercase;
 
-    font-size:14px;
+    letter-spacing:8px;
 
-    margin-bottom:20px;
+    margin-bottom:28px;
 
 }
 
@@ -196,28 +302,236 @@ header{
 
     color:white;
 
-    font-family:'Cormorant Garamond',serif;
-
     font-size:84px;
+
+    line-height:.92;
 
     font-weight:500;
 
-    line-height:.95;
-
-    margin-bottom:20px;
+    margin-bottom:26px;
 
 }
 
-.hero p{
-
-    color:white;
-
-    font-size:22px;
-
-    font-weight:300;
+.hero-description{
 
     max-width:720px;
 
     margin:auto;
+
+    color:white;
+
+    font-size:21px;
+
+    font-weight:300;
+
+    line-height:1.8;
+
+    opacity:.95;
+
+}/* ==========================================================
+   PART 2
+   WELCOME • HIGHLIGHTS • AMENITIES
+========================================================== */
+
+
+/* ==========================================================
+   WELCOME
+========================================================== */
+
+.welcome{
+
+    padding:130px 0;
+    background:#ffffff;
+
+}
+
+.welcome .container{
+
+    max-width:980px;
+    text-align:center;
+
+}
+
+.welcome h2{
+
+    font-size:64px;
+    margin-bottom:30px;
+
+}
+
+.welcome p{
+
+    font-size:20px;
+    line-height:2;
+    color:#666;
+
+}
+
+
+/* ==========================================================
+   HIGHLIGHTS
+========================================================== */
+
+.highlights{
+
+    background:#faf8f5;
+    padding:130px 0;
+
+}
+
+.highlights h2{
+
+    text-align:center;
+    font-size:62px;
+    margin-bottom:70px;
+
+}
+
+.cards{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:35px;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:24px;
+
+    padding:55px 25px;
+
+    text-align:center;
+
+    box-shadow:0 18px 45px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 28px 65px rgba(0,0,0,.15);
+
+}
+
+.card h3{
+
+    font-size:74px;
+    color:var(--gold);
+    margin-bottom:12px;
+
+}
+
+.card p{
+
+    font-size:18px;
+    color:#666;
+    letter-spacing:.5px;
+
+}
+
+
+/* ==========================================================
+   AMENITIES
+========================================================== */
+
+.amenities{
+
+    padding:130px 0;
+    background:white;
+
+}
+
+.amenities h2{
+
+    text-align:center;
+    font-size:62px;
+    margin-bottom:70px;
+
+}
+
+.features{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:32px;
+
+}
+
+.feature{
+
+    background:#faf8f5;
+
+    border-radius:20px;
+
+    padding:42px;
+
+    transition:.35s;
+
+    border:1px solid rgba(0,0,0,.04);
+
+}
+
+.feature:hover{
+
+    transform:translateY(-8px);
+
+    background:white;
+
+    box-shadow:0 25px 55px rgba(0,0,0,.10);
+
+}
+
+.feature h3{
+
+    font-size:28px;
+    margin-bottom:18px;
+
+}
+
+.feature p{
+
+    font-size:17px;
+    line-height:1.8;
+    color:#666;
+
+}
+
+
+/* ==========================================================
+   FEATURE ICON
+   (da aggiungere nell'HTML con emoji o SVG)
+========================================================== */
+
+.feature::before{
+
+    content:"✦";
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    background:#ffffff;
+
+    color:var(--gold);
+
+    font-size:22px;
+
+    margin-bottom:22px;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
 
 }
